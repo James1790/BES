@@ -1,2 +1,1 @@
-# BES
-Bryant Exterior Solutions - Christmas Lighting Repository
+# Bryant Exterior Solutions - Christmas Lighting
