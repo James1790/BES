@@ -1,0 +1,436 @@
+* {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/*------- Navigation -------*/
+.header {
+    width: 100%;
+    background-color: white;
+    padding-top: 0px;
+    padding-bottom: 5px; 
+}
+.banner{
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)),url("images/Christmas_lights.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: static;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 250px;
+    height: auto;
+    padding: 5px;
+}
+nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*-------- Home Screen ------*/
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 20px;
+}
+.text-box h1{
+    font-size: 48px;
+    line-height: 1.2;
+}
+.text-box p {
+    margin: 18px 0 40px;
+    font-size: 16px;
+    color: white;
+}
+.hero-btn{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.5s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 25px;
+        line-height: 1.2;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -150px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color:black;
+        margin: 10px;
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding:30px;
+    }
+}
+
+/*----- Services -----*/
+.package{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.package p{
+    color:black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    text-align: left;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.package-col-plat{
+    flex-basis: 45%;
+    background: #cecece;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: left;
+}
+.package-col-gold{
+    flex-basis: 45%;
+    background: #d2c74a;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: left;
+
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.package-col-plat:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+.package-col-gold:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-weight: 500;
+}
+.discounted-price {
+    color: #d32f2f; /* Red color for emphasis */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+.sale-note {
+    color: #4caf50; /* Green color for the sale note */
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.other {
+    flex-basis: 45%;
+    background: #18ab1a;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: left;
+}
+.other:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*--------- About Us ---------*/
+.about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.about h1 {
+    margin-bottom: 30px;
+}
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    text-align: left;
+}
+.about-col {
+    flex-basis: 32%;
+    position: relative;
+    overflow: hidden;
+}
+.about-text {
+    flex-basis: 70%;
+}
+.about-col img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+.logo{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+.logo img{
+    width: 35%;
+    height: auto;
+}
+@media(max-width:700px) {
+    .about-content{
+        flex-direction: column;
+    }
+    .about-col {
+        position: center;
+        left: 10%;
+    }
+}
+
+/*-------- Contact Us --------*/
+.Contact {
+    position: relative;
+    min-height: 100px;
+    padding: 5% 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #18ab1a; 
+    ;
+}
+.content{
+    position: center;
+    text-align: center;
+    padding-bottom: 5%;
+    color: white;
+}
+.wrapper {
+    color: #fff;
+    background: rgb(255, 57, 57);
+    backdrop-filter: blur(80px);
+    width: 100%;
+    padding: 30px 40px;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+.wrapper h1 {
+    font-size: 36;
+    text-align: center;
+}
+.wrapper .input-box {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    position: relative;
+    text-align: center;
+}
+.input-box input {
+    width: 80%;
+    height: 40%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 20px 20px 20px;
+}
+.input-box input::placeholder {
+    color: #fff;
+}
+.input-box i {
+    position: absolute;
+    right: 4%;
+    top: 51%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+}
+.input-box {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    text-align: center;
+}
+.input-box select {
+    width: 80%; 
+    height: 40px; 
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); 
+    border-radius: 30px; 
+    font-size: 16px; 
+    padding-left: 20px;
+    color: #fff; 
+}
+textarea {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+textarea::placeholder {
+    color: white;
+}
+#resetButton, #submitButton {
+    background-color: #ffffff; 
+    color: rgb(148, 174, 208); 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 40px;
+    cursor: pointer;
+}
+#resetButton:hover, #submitButton:hover {
+    background-color: #18ab1a; 
+    color: #fff; 
+}
+#btns {
+    position: relative;
+    left: 36%;
+    bottom: 5%;
+    padding-bottom: 5%;
+}
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: none;
+}
+.footerLogo img{
+    position: relative;
+    width: 250px;
+    height: auto;
+    left: 10%;
+}
+.contactDetails {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    padding-left: 5%;
+}
+.phone, .email {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+.phone i, .email i {
+    font-size: 18px;
+}
+.contactInfo p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width:700px)
+{
+    .input-box input, textarea {
+        width: 100%;
+    }
+    .content p, .wrapper h3{
+        text-align: left;
+    }
+    .wrapper h1 {
+        font-size: 35px;
+    }
+    .wrapper h3 {
+        font-size: 15px;
+    }
+    .contactInfo {
+        display: none;
+    }
+    #btns {
+        position: relative;
+        left: 15%;
+        bottom: 5%;
+        padding-bottom: 5%;
+    }
+}
