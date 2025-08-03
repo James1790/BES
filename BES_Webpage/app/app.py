@@ -9,8 +9,8 @@ CORS(app)
 conn = mysql.connector.connect(
     host="localhost",  # Remove ":3306"
     user="root",
-    password="James1790!",
-    database="BES"
+    password="",
+    database=""
 )
 cursor = conn.cursor()
 
@@ -44,8 +44,8 @@ def submit():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="James1790!",
-            database="BES"
+            password="",
+            database=""
         )
         cursor = conn.cursor()
 
